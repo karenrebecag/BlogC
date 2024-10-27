@@ -1786,17 +1786,72 @@ div#selectionSharerPopover:after,
 	
 /* ABOUT THE AUTHOR */
 .about-author {
- 	margin: 2em 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+	stroke: black solid 10px;
+	color: black;
+    align-items: center;
+    background-color: white;
 	}
-.about-author h3 {
-	font-size: 10px; color: #00000059; letter-spacing: 2px; text-transform: uppercase;
+.author-name {
+	font-size: 10px; color: black; letter-spacing: 2px; text-transform: uppercase;
 	}
-.author-bio {
- 	padding: 1.4em 0;
+	.about-author p {
+		font-size: 10px; color: black; letter-spacing: 2px; text-transform: uppercase;
+		}
+
+	.author-bio {
+		display: flex;
+		align-items: center;
+		width: 100%; /* Asegura que ocupe todo el ancho disponible */
+		padding: 2em 0;
+	}
+	
+
+/* FORMULARIO */
+.form-group {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* Espacio entre los inputs */
+    margin-bottom: 1.5em; /* Espacio entre el formulario y las redes sociales */
+}
+
+.input, .submit {
+    height: 50px; /* Altura uniforme para ambos */
+    border: none;
+    outline: none;
+
+}
+
+.input {
+    padding-left: 10px;
+}
+
+.submit {
+    background-color: #3A642A;
+    cursor: pointer;
+	border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #68B048;
+	color: white;
+}
+	
+	.author-bio .submit:focus {
+		outline: none;  /* Asegura que no se muestre el contorno al recibir foco */
+	}
+	
+	.author-bio .submit:hover {
+		background-color: #2E4D21; /* Cambia el color al pasar el mouse */
 	}
 .author-bio h4 {
-	font-size: 13px;
-    margin-bottom: .6em;
+	font-size: 24px;
+
 	}
 .author-img {
  	width: 54px; float: left;
@@ -1808,7 +1863,8 @@ div#selectionSharerPopover:after,
 	margin-left: 72px;
 	}
 .author-info p {
- 	font-size: .875em; line-height: 1.7; margin: .4em 0;
+ 	font-size: 1em;
+
 	}
 .author-info *:first-child {
  	margin-top: 0
